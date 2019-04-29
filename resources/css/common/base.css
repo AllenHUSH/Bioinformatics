@@ -1,7 +1,9 @@
-/* 本css为主页面index.html 配置 */
+/* 本css为公共配置 */
 
 /* 通用样式 */
-
+iframe{
+    border: none;
+}
 /* PC端样式 */
 
 @media screen and (min-width: 768px) {}
