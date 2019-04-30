@@ -1,9 +1,23 @@
 /* 本css为公共配置 */
 
 /* 通用样式 */
-iframe{
-    border: none;
+
+#app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    /* margin-top: 60px; */
 }
+
+iframe {
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* PC端样式 */
 
 @media screen and (min-width: 768px) {}

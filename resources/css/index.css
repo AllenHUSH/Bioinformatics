@@ -2,10 +2,48 @@
 
 /* 通用样式 */
 
+.itemDiv {
+    margin: 0 auto 100px;
+}
+
+.el-carousel__item img {
+    width: 100%;
+}
+
+#carousel {
+    margin: 0 auto;
+}
+#introduction p {
+    width: 70%;
+    margin: 5px auto;
+    text-align: justify;
+}
+
+#activities {
+    width: 50%;
+}
+
+#cooperative img {
+    width: 100%;
+}
+
+#cooperative .box-card {
+    /* height: 300px; */
+}
+
 /* PC端样式 */
 
 @media screen and (min-width: 768px) {}
 
 /* 移动端样式 */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    .itemDiv {
+        margin: 0 auto 50px;
+    }
+    #activities {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #activities el-timeline {}
+}

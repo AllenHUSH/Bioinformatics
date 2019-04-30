@@ -9,20 +9,137 @@
     <title>Bioinformatics</title>
     <link rel="stylesheet" href="./resources/css/common/bootstrap.css">
     <link rel="stylesheet" href="./resources/css/common/elementUI.css">
+    <link rel="stylesheet" href="./resources/css/common/display.css">
     <link rel="stylesheet" href="./resources/css/common/base.css">
     <link rel="stylesheet" href="./resources/css/index.css">
 </head>
 
 <body>
     <div id="app">
+        <!-- 统一注入导航栏 -->
         <div id="header"><iframe src="./header.html"></iframe></div>
-
-
+        <!-- 首页轮播模块 -->
+        <div class="hidden-sm-and-up">小尺寸可见</div>
+        <div id="carousel" class="itemDiv hidden-xs-only">
+            <el-carousel indicator-position="outside" type="card">
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/1.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/2.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/3.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/4.JPG" alt="©️NENU">
+                </el-carousel-item>
+            </el-carousel>
+        </div>
+        <!-- 实验室介绍模块 -->
+        <div id="introduction" class="itemDiv">
+            <el-card>
+                <el-row :gutter="10">
+                    <el-col :sm="2">&nbsp;</el-col>
+                    <el-col :sm="10">
+                        <h1>Introduction</h1>
+                        <p>The NENU-ICB is a research group focusing on human complex diseases research and relevant
+                            drug
+                            target
+                            discovering
+                            starting from Protein Interactome Networks. Many research fields are involved in our works,
+                            including
+                            biological big
+                            data, computational methods and algorithms. We are trying our best to offer computational
+                            tools
+                            and
+                            biological data
+                            services for the better lives tomorrow!</p>
+                        <el-button>More</el-button>
+                    </el-col>
+                    <el-col :sm="10">
+                        <img src="./resources/images/carousel/2.JPG" alt="" width="100%">
+                    </el-col>
+                    <el-col :sm="2">&nbsp;</el-col>
+                </el-row>
+            </el-card>
+        </div>
+        <!-- 近期活动模块 -->
+        <div id="activities" class="itemDiv">
+            <h1>Research Activities</h1>
+            <el-timeline>
+                <el-timeline-item timestamp="2018/4/12" placement="top">
+                    <el-card>
+                        <h4>Biological Networks</h4>
+                        <p>Jess Farrell 提交于 2018/4/12 20:46</p>
+                    </el-card>
+                </el-timeline-item>
+                <el-timeline-item timestamp="2018/4/3" placement="top">
+                    <el-card>
+                        <h4>Precision Medicine</h4>
+                        <p>Danny Batz 提交于 2018/4/3 20:46</p>
+                    </el-card>
+                </el-timeline-item>
+                <el-timeline-item timestamp="2018/4/2" placement="top">
+                    <el-card>
+                        <h4>Biodata</h4>
+                        <p>Leland Wolf 提交于 2018/4/2 20:46</p>
+                    </el-card>
+                </el-timeline-item>
+            </el-timeline>
+        </div>
+        <!-- 合作组织模块 -->
+        <div id="cooperative" class="itemDiv">
+            <h1>Cooperative unit</h1>
+            <el-row :gutter="10">
+                <el-col :sm="2">&nbsp;</el-col>
+                <el-col :sm="4">
+                    <el-card class="box-card">
+                        <img src="./resources/images/cooperativeUnit/ShanghaiMentalHealthCenter.jpg">
+                        <hr />
+                        <span>Shanghai Mental Health Center</span>
+                    </el-card>
+                </el-col>
+                <el-col :sm="4">
+                    <el-card class="box-card">
+                        <img
+                            src="./resources/images/cooperativeUnit/LinGuanningResearchGroupofShanghaiJiaotongUniversity.jpg">
+                        <hr />
+                        <span>Lin Guanning Research Group of Shanghai Jiaotong University</span>
+                    </el-card>
+                </el-col>
+                <el-col :sm="4">
+                    <el-card class="box-card">
+                        <img
+                            src="./resources/images/cooperativeUnit/DepartmentofComputerScienceUniversityofMissouri.jpg">
+                        <hr />
+                        <span>Department of Computer Science, University of Missouri, Columbia</span>
+                    </el-card>
+                </el-col>
+                <el-col :sm="4">
+                    <el-card class="box-card">
+                        <img
+                            src="./resources/images/cooperativeUnit/UniversityofElectronicScienceandTechnologyofChina.jpg">
+                        <hr />
+                        <span>University of Electronic Science and Technology of China</span>
+                    </el-card>
+                </el-col>
+                <el-col :sm="4">
+                    <el-card class="box-card">
+                        <img src="./resources/images/cooperativeUnit/JilinUniversity.jpg">
+                        <hr />
+                        <span>Jilin University</span>
+                    </el-card>
+                </el-col>
+                <el-col :sm="2">&nbsp;</el-col>
+            </el-row>
+        </div>
+        <!-- 统一注入尾部栏 -->
         <div id="footer"><iframe src="./footer.html"></iframe></div>
     </div>
 </body>
-<script src="./resources/js/common/jquery.js"></script>
-<script src="./resources/js/common/bootstrap.js"></script>
+<!-- <script src="./resources/js/common/jquery.js"></script> -->
+<!-- <script src="./resources/js/common/bootstrap.js"></script> -->
 <script src="./resources/js/common/vue.js"></script>
 <script src="./resources/js/common/newVue.js"></script>
 <script src="./resources/js/common/elementUI.js"></script>
