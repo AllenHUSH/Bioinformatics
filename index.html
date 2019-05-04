@@ -16,12 +16,105 @@
 
 <body>
     <div id="app">
-        <!-- 统一注入导航栏 -->
-        <div id="header"><iframe src="./header.html"></iframe></div>
+        <!-- 导航栏模板 -->
+        <el-card id="navigation">
+            <!-- PC端导航栏 -->
+            <div id="pcNav" class="hidden-xs-only">
+                <h1>NENU Institute of Computational Biology</h1>
+                <a href="./index.html">Home</a>
+                <el-divider direction="vertical"></el-divider>
+                <el-dropdown>
+                    <span class="el-dropdown-link">
+                        Publications<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item><a href="./pubPublications.html">Publications</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./pubProjects.html">Projects</a></el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+                <el-divider direction="vertical"></el-divider>
+                <a href="./researchActivities.html">Research Activities</a>
+                <el-divider direction="vertical"></el-divider>
+                <el-dropdown>
+                    <span class="el-dropdown-link">
+                        Contact Us<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item><a href="./contactMentors.html">Mentors</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactTeachers.html">Teachers</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactStudents.html">Students</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactGraduates.html">Graduates</a></el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
+            <!-- 移动端导航栏 -->
+            <div id="mobileNav" class="hidden-sm-and-up">
+                <img src="./resources/images/common/校徽.png" alt="" @click="showNav = !showNav" width="20%">
+                <el-collapse-transition>
+                    <nav v-show="showNav">
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <a href="./index.html">
+                                <h4>Home</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <el-dropdown>
+                                <h4 class="el-dropdown-link">
+                                    Publications<i class="el-icon-arrow-down el-icon--right"></i>
+                                </h4>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item><a href="./pubPublications.html">Publications</a>
+                                    </el-dropdown-item>
+                                    <el-dropdown-item><a href="./pubProjects.html">Projects</a></el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <a href="./researchActivities.html">
+                                <h4>Research Activities</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <el-dropdown>
+                                <h4 class="el-dropdown-link">
+                                    Contact Us<i class="el-icon-arrow-down el-icon--right"></i>
+                                </h4>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item><a href="./contactMentors.html">Mentors</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactTeachers.html">Teachers</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactStudents.html">Students</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactGraduates.html">Graduates</a></el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </div>
+                        <el-divider></el-divider>
+                    </nav>
+                </el-collapse-transition>
+            </div>
+        </el-card>
         <!-- 首页轮播模块 -->
-        <div class="hidden-sm-and-up">小尺寸可见</div>
-        <div id="carousel" class="itemDiv hidden-xs-only">
-            <el-carousel indicator-position="outside" type="card">
+        <div id="carousel" class="itemDiv">
+            <!-- 移动端效果 -->
+            <el-carousel class="hidden-sm-and-up">
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/1.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/2.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/3.JPG" alt="©️NENU">
+                </el-carousel-item>
+                <el-carousel-item>
+                    <img src="./resources/images/carousel/4.JPG" alt="©️NENU">
+                </el-carousel-item>
+            </el-carousel>
+            <!-- PC端效果 -->
+            <el-carousel type="card" class="hidden-xs-only" indicator-position="none">
                 <el-carousel-item>
                     <img src="./resources/images/carousel/1.JPG" alt="©️NENU">
                 </el-carousel-item>
@@ -55,7 +148,8 @@
                             and
                             biological data
                             services for the better lives tomorrow!</p>
-                        <el-button>More</el-button>
+                        <el-button onclick="javascript:window.location.href='http://www.baidu.com'"
+                            id="introductionButton">More</el-button>
                     </el-col>
                     <el-col :sm="10">
                         <img src="./resources/images/carousel/2.JPG" alt="" width="100%">
@@ -67,40 +161,55 @@
         <!-- 近期活动模块 -->
         <div id="activities" class="itemDiv">
             <h1>Research Activities</h1>
-            <el-timeline>
-                <el-timeline-item timestamp="2018/4/12" placement="top">
-                    <el-card>
-                        <h4>Biological Networks</h4>
-                        <p>Jess Farrell 提交于 2018/4/12 20:46</p>
-                    </el-card>
-                </el-timeline-item>
-                <el-timeline-item timestamp="2018/4/3" placement="top">
-                    <el-card>
-                        <h4>Precision Medicine</h4>
-                        <p>Danny Batz 提交于 2018/4/3 20:46</p>
-                    </el-card>
-                </el-timeline-item>
-                <el-timeline-item timestamp="2018/4/2" placement="top">
-                    <el-card>
-                        <h4>Biodata</h4>
-                        <p>Leland Wolf 提交于 2018/4/2 20:46</p>
-                    </el-card>
-                </el-timeline-item>
-            </el-timeline>
+            <div id="pcAct" class="hidden-xs-only">
+                <el-timeline>
+                    <el-timeline-item timestamp="2018/4/12" placement="top">
+                        <el-card>
+                            <h4>Biological Networks</h4>
+                            <p>Jess Farrell 提交于 2018/4/12 20:46</p>
+                        </el-card>
+                    </el-timeline-item>
+                    <el-timeline-item timestamp="2018/4/3" placement="top">
+                        <el-card>
+                            <h4>Precision Medicine</h4>
+                            <p>Danny Batz 提交于 2018/4/3 20:46</p>
+                        </el-card>
+                    </el-timeline-item>
+                    <el-timeline-item timestamp="2018/4/2" placement="top">
+                        <el-card>
+                            <h4>Biodata</h4>
+                            <p>Leland Wolf 提交于 2018/4/2 20:46</p>
+                        </el-card>
+                    </el-timeline-item>
+                </el-timeline>
+            </div>
+            <div id="mobileAct" class="hidden-sm-and-up">
+                <el-timeline>
+                    <el-timeline-item timestamp="2018/4/12" placement="top">
+                        Biological Networks
+                    </el-timeline-item>
+                    <el-timeline-item timestamp="2018/4/3" placement="top">
+                        Precision Medicine
+                    </el-timeline-item>
+                    <el-timeline-item timestamp="2018/4/2" placement="top">
+                        Biodata
+                    </el-timeline-item>
+                </el-timeline>
+            </div>
         </div>
         <!-- 合作组织模块 -->
         <div id="cooperative" class="itemDiv">
             <h1>Cooperative unit</h1>
             <el-row :gutter="10">
-                <el-col :sm="2">&nbsp;</el-col>
-                <el-col :sm="4">
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+                <el-col :sm="4" :xs="12">
                     <el-card class="box-card">
                         <img src="./resources/images/cooperativeUnit/ShanghaiMentalHealthCenter.jpg">
                         <hr />
                         <span>Shanghai Mental Health Center</span>
                     </el-card>
                 </el-col>
-                <el-col :sm="4">
+                <el-col :sm="4" :xs="12">
                     <el-card class="box-card">
                         <img
                             src="./resources/images/cooperativeUnit/LinGuanningResearchGroupofShanghaiJiaotongUniversity.jpg">
@@ -108,7 +217,7 @@
                         <span>Lin Guanning Research Group of Shanghai Jiaotong University</span>
                     </el-card>
                 </el-col>
-                <el-col :sm="4">
+                <el-col :sm="4" :xs="12">
                     <el-card class="box-card">
                         <img
                             src="./resources/images/cooperativeUnit/DepartmentofComputerScienceUniversityofMissouri.jpg">
@@ -116,7 +225,7 @@
                         <span>Department of Computer Science, University of Missouri, Columbia</span>
                     </el-card>
                 </el-col>
-                <el-col :sm="4">
+                <el-col :sm="4" :xs="12">
                     <el-card class="box-card">
                         <img
                             src="./resources/images/cooperativeUnit/UniversityofElectronicScienceandTechnologyofChina.jpg">
@@ -124,18 +233,26 @@
                         <span>University of Electronic Science and Technology of China</span>
                     </el-card>
                 </el-col>
-                <el-col :sm="4">
+                <el-col :sm="4" :xs="12">
                     <el-card class="box-card">
                         <img src="./resources/images/cooperativeUnit/JilinUniversity.jpg">
                         <hr />
                         <span>Jilin University</span>
                     </el-card>
                 </el-col>
-                <el-col :sm="2">&nbsp;</el-col>
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
             </el-row>
         </div>
         <!-- 统一注入尾部栏 -->
-        <div id="footer"><iframe src="./footer.html"></iframe></div>
+        <div id="footer">
+            <el-card>
+                <h4>
+                    Biological big data
+                    Computational methods
+                </h4>
+                <p>©2018 Northeast Normal University-Institute of Computational Biology.</p>
+            </el-card>
+        </div>
     </div>
 </body>
 <!-- <script src="./resources/js/common/jquery.js"></script> -->
@@ -144,5 +261,16 @@
 <script src="./resources/js/common/newVue.js"></script>
 <script src="./resources/js/common/elementUI.js"></script>
 <script src="./resources/js/index.js"></script>
+<script type="text/javascript">
+    window.onscroll = function () {
+        var topScroll = document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
+        var navigation = document.getElementById("navigation");//获取到导航栏id
+        if (topScroll > 100) {  //当滚动距离大于250px时执行下面的东西
+            navigation.classList.add("fixed")
+        } else {//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+            navigation.classList.remove("fixed")
+        }
+    }
+</script>
 
 </html>

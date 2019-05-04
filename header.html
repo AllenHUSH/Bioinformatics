@@ -3,22 +3,27 @@
     <link rel="stylesheet" href="./resources/css/common/elementUI.css">
     <link rel="stylesheet" href="./resources/css/common/display.css">
     <link rel="stylesheet" href="./resources/css/common/base.css">
-    <link rel="stylesheet" href="./resources/css/index.css">
 </head>
 
 <body style="background-color: transparent;">
     <div id="app">
+        <div id="navigation">
             <el-card>
                 <h1>NENU Institute of Computational Biology</h1>
-                <el-link type="primary">Home</el-link>
-                <el-divider direction="vertical"></el-divider>
-                <el-link type="primary">Publications</el-link>
-                <el-divider direction="vertical"></el-divider>
-                <el-link type="primary">Research Activities</el-link>
-                <el-divider direction="vertical"></el-divider>
-                <el-link type="primary">Contact Us</el-link>
+                <el-button type="primary" icon="el-icon-menu" circle @click="showNav = !showNav"></el-button>
+                <el-collapse-transition>
+                    <nav v-show="showNav">
+                        <ul>
+                            <li><el-link type="primary">Home</el-link></li>
+                            <li><el-link type="primary">Publications</el-link></li>
+                            <li><el-link type="primary">Research Activities</el-link></li>
+                            <li><el-link type="primary">Contact Us</el-link></li>
+                        </ul>
+                    </nav>
+                </el-collapse-transition>
             </el-card>
-    <div>
+        </div>
+    </div>
 </body>
 <!-- <script src="./resources/js/common/jquery.js"></script> -->
 <!-- <script src="./resources/js/common/bootstrap.js"></script> -->

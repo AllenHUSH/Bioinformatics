@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lina,Allen">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bioinformatics</title>
+    <link rel="stylesheet" href="./resources/css/common/bootstrap.css">
+    <link rel="stylesheet" href="./resources/css/common/elementUI.css">
+    <link rel="stylesheet" href="./resources/css/common/display.css">
+    <link rel="stylesheet" href="./resources/css/common/base.css">
+    <link rel="stylesheet" href="./resources/css/researchActivities.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 导航栏模板 -->
+        <el-card id="navigation">
+            <!-- PC端导航栏 -->
+            <div id="pcNav" class="hidden-xs-only">
+                <h1>NENU Institute of Computational Biology</h1>
+                <a href="./index.html">Home</a>
+                <el-divider direction="vertical"></el-divider>
+                <el-dropdown>
+                    <span class="el-dropdown-link">
+                        Publications<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item><a href="./pubPublications.html">Publications</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./pubProjects.html">Projects</a></el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+                <el-divider direction="vertical"></el-divider>
+                <a href="./researchActivities.html">Research Activities</a>
+                <el-divider direction="vertical"></el-divider>
+                <el-dropdown>
+                    <span class="el-dropdown-link">
+                        Contact Us<i class="el-icon-arrow-down el-icon--right"></i>
+                    </span>
+                    <el-dropdown-menu slot="dropdown">
+                        <el-dropdown-item><a href="./contactMentors.html">Mentors</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactTeachers.html">Teachers</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactStudents.html">Students</a></el-dropdown-item>
+                        <el-dropdown-item><a href="./contactGraduates.html">Graduates</a></el-dropdown-item>
+                    </el-dropdown-menu>
+                </el-dropdown>
+            </div>
+            <!-- 移动端导航栏 -->
+            <div id="mobileNav" class="hidden-sm-and-up">
+                <img src="./resources/images/common/校徽.png" alt="" @click="showNav = !showNav" width="20%">
+                <el-collapse-transition>
+                    <nav v-show="showNav">
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <a href="./index.html">
+                                <h4>Home</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <el-dropdown>
+                                <h4 class="el-dropdown-link">
+                                    Publications<i class="el-icon-arrow-down el-icon--right"></i>
+                                </h4>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item><a href="./pubPublications.html">Publications</a>
+                                    </el-dropdown-item>
+                                    <el-dropdown-item><a href="./pubProjects.html">Projects</a></el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <a href="./researchActivities.html">
+                                <h4>Research Activities</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="navList">
+                            <el-dropdown>
+                                <h4 class="el-dropdown-link">
+                                    Contact Us<i class="el-icon-arrow-down el-icon--right"></i>
+                                </h4>
+                                <el-dropdown-menu slot="dropdown">
+                                    <el-dropdown-item><a href="./contactMentors.html">Mentors</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactTeachers.html">Teachers</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactStudents.html">Students</a></el-dropdown-item>
+                                    <el-dropdown-item><a href="./contactGraduates.html">Graduates</a></el-dropdown-item>
+                                </el-dropdown-menu>
+                            </el-dropdown>
+                        </div>
+                        <el-divider></el-divider>
+                    </nav>
+                </el-collapse-transition>
+            </div>
+        </el-card>
+        <!-- 主视图窗口 -->
+        <div class="itemDiv">
+            <!-- 面包屑 -->
+            <el-row :gutter="30">
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+                <el-col :sm="20">
+                    <el-breadcrumb separator="/">
+                        <el-breadcrumb-item><a href="./index.html">Home</a></el-breadcrumb-item>
+                        <el-breadcrumb-item>Research Activities</el-breadcrumb-item>
+                    </el-breadcrumb>
+                </el-col>
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+            </el-row>
+            <el-form class="hidden-sm-and-up">
+                <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
+                </el-input>
+            </el-form>
+            <!-- 文章列表和搜索 -->
+            <el-row :gutter="30">
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+                <!-- 文章列表 -->
+                <el-col :sm="15">
+                    <el-card>
+                        <el-divider></el-divider>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium
+                                            commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium
+                                            commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium
+                                            commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium
+                                            commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                        <div class="itemList">
+                            <a href="">
+                                <div class="itemListBox">
+                                    <div class="itemListImg">
+                                        <img src="./resources/images/carousel/4.JPG" alt="">
+                                    </div>
+                                    <div class="itemListText">
+                                        <h4>Activities Title</h4>
+                                        <p>201X-XX-XX</p>
+                                        <span class="hidden-xs-only">Quae veniam officiis laborum labore cumque odit
+                                            sint. Et est dolore earum. Quod amet praesentium
+                                            commodi veniam.</span>
+                                    </div>
+                                </div>
+                                <el-divider></el-divider>
+                            </a>
+                        </div>
+                    </el-card>
+                </el-col>
+                <!-- PC端显示的搜索框 -->
+                <el-col :sm="5" class="hidden-xs-only">
+                    <el-card>
+                        <el-form>
+                            <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
+                            </el-input>
+                        </el-form>
+                        <hr>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+            </el-row>
+        </div>
+        <!-- 统一注入尾部栏 -->
+        <div id="footer">
+            <el-card>
+                <h4>
+                    Biological big data
+                    Computational methods
+                </h4>
+                <p>©2018 Northeast Normal University-Institute of Computational Biology.</p>
+            </el-card>
+        </div>
+    </div>
+</body>
+<!-- <script src="./resources/js/common/jquery.js"></script> -->
+<!-- <script src="./resources/js/common/bootstrap.js"></script> -->
+<script src="./resources/js/common/vue.js"></script>
+<script src="./resources/js/common/newVue.js"></script>
+<script src="./resources/js/common/elementUI.js"></script>
+<script src="./resources/js/index.js"></script>
+<script type="text/javascript">
+    window.onscroll = function () {
+        var topScroll = document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
+        var navigation = document.getElementById("navigation");//获取到导航栏id
+        if (topScroll > 100) {  //当滚动距离大于250px时执行下面的东西
+            navigation.classList.add("fixed")
+        } else {//当滚动距离小于250的时候执行下面的内容，也就是让导航栏恢复原状
+            navigation.classList.remove("fixed")
+        }
+    }
+</script>
+
+</html>
