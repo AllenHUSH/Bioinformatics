@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="./resources/css/common/elementUI.css">
     <link rel="stylesheet" href="./resources/css/common/display.css">
     <link rel="stylesheet" href="./resources/css/common/base.css">
-    <link rel="stylesheet" href="./resources/css/publications.css">
+    <link rel="stylesheet" href="./resources/css/contactUs.css">
 </head>
 
 <body>
     <div id="app">
-        <!-- 导航栏模板 --><el-card id="navigation">
+        <!-- 导航栏模板 -->
+        <el-card id="navigation">
             <!-- PC端导航栏 -->
             <div id="pcNav" class="hidden-xs-only">
                 <h1>NENU Institute of Computational Biology</h1>
@@ -95,7 +96,6 @@
                 </el-collapse-transition>
             </div>
         </el-card>
-        
         <!-- 主视图窗口 -->
         <div class="itemDiv">
             <!-- 面包屑 -->
@@ -104,8 +104,8 @@
                 <el-col :sm="20">
                     <el-breadcrumb separator="/">
                         <el-breadcrumb-item><a href="./index.html">Home</a></el-breadcrumb-item>
-                        <el-breadcrumb-item>Publications</el-breadcrumb-item>
-                        <el-breadcrumb-item>Publications</el-breadcrumb-item>
+                        <el-breadcrumb-item>Contact Us</el-breadcrumb-item>
+                        <el-breadcrumb-item>Graduates</el-breadcrumb-item>
                     </el-breadcrumb>
                 </el-col>
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
@@ -114,113 +114,134 @@
                 <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
                 </el-input>
             </el-form>
-            <!-- 文章列表和搜索 -->
+            <!-- 文章列表 -->
+            <!-- 每行最多放置四个卡片 -->
+            <!-- 第一行 -->
             <el-row :gutter="30">
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
-                <!-- 文章列表 -->
-                <el-col :sm="15">
+                <el-col :sm="5" :xs="12">
                     <el-card>
-            
-                        <el-divider></el-divider>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="itemList">
-                            <a href="./pubShow.html">
-                                <div>
-                                    <h4>List Title</h4>
-                                    <p>201X-XX-XX</p>
-                                    <el-divider></el-divider>
-                                </div>
-                            </a>
-                        </div>
+                        <a href="">
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
+                        </a>
                     </el-card>
                 </el-col>
-                <!-- PC端显示的搜索框 -->
-                <el-col :sm="5" class="hidden-xs-only">
+                <el-col :sm="5" :xs="12">
                     <el-card>
-                        <el-form>
-                            <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
-                            </el-input>
-                        </el-form>
-                        <hr>
                         <a href="">
-                            <el-tag>ListTitle</el-tag>
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
                         </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
                         <a href="">
-                            <el-tag>ListTitle</el-tag>
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
                         </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
                         <a href="">
-                            <el-tag>ListTitle</el-tag>
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
+                        </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+            </el-row>
+            <br class="hidden-xs-only">
+            <!-- 第二行 -->
+            <el-row :gutter="30">
+                <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
+                        <a href="">
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
+                        </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
+                        <a href="">
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
+                        </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
+                        <a href="">
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
+                        </a>
+                    </el-card>
+                </el-col>
+                <el-col :sm="5" :xs="12">
+                    <el-card>
+                        <a href="">
+                            <div class="itemImg">
+                                <img src="./resources/images/contactUs/base.jpg" alt="">
+                            </div>
+                            <h4 class="itemName">Name</h4>
+                            <hr class="itemHr">
+                            <span class="itemInfo">
+                                Nostrum nobis deleniti cumque voluptas ipsam. Laborum debitis modi nam autem rerum. Et
+                                cumque mollitia excepturi dolore iusto sed sint facere ex.
+                            </span>
                         </a>
                     </el-card>
                 </el-col>

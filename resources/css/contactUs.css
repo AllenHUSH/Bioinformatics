@@ -2,17 +2,22 @@
 
 /* 通用样式 */
 
-#essay {
-    text-align: left;
+.itemImg img {
+    width: 100%;
 }
-
-#essay span{
+.itemInfo{
+    max-height: 200px;
+    overflow: hidden;
     display: block;
 }
 
 /* PC端样式 */
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .itemHr {
+        margin: 0;
+    }
+}
 
 /* 移动端样式 */
 
