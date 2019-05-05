@@ -1,0 +1,57 @@
+/* 本css为主页面index.html 配置 */
+
+/* 通用样式 */
+
+.itemListImg img{
+    width: 100%;
+}
+
+/* PC端样式 */
+
+@media screen and (min-width: 768px) {
+    .itemListTextAll{
+        width: 100%;
+        text-align: left;
+        padding: 40px;
+    }
+    /* 文章内容 */
+    .itemListTextAllp{
+        text-indent:2em;
+    }
+    /* 前后页按钮中文字,超长时省略 */
+    .itemListTextNav{
+        margin-top:5px;
+        margin-bottom: 10px;
+        width:300px;
+        overflow: hidden;
+        white-space:nowrap;
+        -ms-text-overflow:ellipsis;
+        -o-text-overflow:ellipsis;
+        text-overflow:ellipsis;
+    }
+}
+
+/* 移动端样式 */
+
+@media screen and (max-width: 768px) {
+    .itemListTextAll{
+        width: 100%;
+        text-align: left;
+        padding: 40px;
+    }
+    /* 文章内容 */
+    .itemListTextAllp{
+        text-indent:2em;
+    }
+    /* 前后页按钮中文字,超长时省略 */
+    .itemListTextNav{
+        margin-top:10px;
+        margin-bottom:10px;
+        width:200px;
+        overflow: hidden;
+        white-space:nowrap;
+        -ms-text-overflow:ellipsis;
+        -o-text-overflow:ellipsis;
+        text-overflow:ellipsis;
+    }
+}

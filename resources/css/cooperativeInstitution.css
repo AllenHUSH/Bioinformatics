@@ -1,0 +1,47 @@
+/* 本css为主页面index.html 配置 */
+
+/* 通用样式 */
+
+.itemListImg img{
+    width: 436px;
+    height:150px;
+    margin-bottom: 20px;
+    vertical-align:left;
+}
+.itemListImg {
+    width: 40%;
+    /* vertical-align:left; */
+    margin-right: 55%;
+}
+
+
+/* PC端样式 */
+
+@media screen and (min-width: 768px) {
+    .itemList {
+        position: relative;
+    }
+    .itemListBox {
+        height: 270px;
+    }
+    .itemListImg {
+        width: 40%;
+        /* vertical-align:left; */
+    }
+    .itemListText {
+        text-align: left;
+       margin-left: 30px;
+    }
+}
+
+/* 移动端样式 */
+
+@media screen and (max-width: 768px) {
+    .itemListImg {
+        width: 100%;
+    }
+    .itemListText {
+        text-align: left;
+        left: 50%;
+    }
+}

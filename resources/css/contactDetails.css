@@ -1,0 +1,59 @@
+/* 本css为主页面index.html 配置 */
+
+/* 通用样式 */
+.introduce{
+    width: 83%;
+    margin:30px auto;
+    text-align: left;
+    padding: 0 20px;
+}
+.introduce p{
+    width:70%;
+}
+.itemList{
+    text-align: left;
+    padding: 20px;
+}
+.itemListImg{
+    width:300px;
+    height:340px;
+    margin-right: 55%;
+}
+.itemListText{
+    line-height: 300%;
+}
+/* 文章内容 */
+.itemListTextAllp{
+    text-indent:2em;
+}
+/* 前后页按钮中文字,超长时省略 */
+.itemListTextNav{
+    margin-top:5px;
+    margin-bottom: 10px;
+    width:300px;
+    overflow: hidden;
+    white-space:nowrap;
+    -ms-text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    text-overflow:ellipsis;
+}
+.itemImg img {
+    width: 100%;
+}
+.itemInfo{
+    max-height: 200px;
+    overflow: hidden;
+    display: block;
+}
+
+/* PC端样式 */
+
+@media screen and (min-width: 768px) {
+    .itemHr {
+        margin: 0;
+    }
+}
+
+/* 移动端样式 */
+
+@media screen and (max-width: 768px) {}

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./resources/css/common/elementUI.css">
     <link rel="stylesheet" href="./resources/css/common/display.css">
     <link rel="stylesheet" href="./resources/css/common/base.css">
-    <link rel="stylesheet" href="./resources/css/publications.css">
+    <link rel="stylesheet" href="./resources/css/contactDetails.css">
 </head>
 
 <body>
@@ -96,18 +96,23 @@
                 </el-collapse-transition>
             </div>
         </el-card>
-
         <!-- 主视图窗口 -->
         <div class="itemDiv">
+            <el-card class="introduce">
+                <h1>Associate Professor. Han Wang</h1>
+                <p>后端添加Research field:Membrane Protein & Drug Network College of
+                     Information Science and Technology, Northeast Normal University, 
+                     China E-mail:wangh101@nenu.edu.cn, wanghan79@hotmail.com</p>
+            </el-card>
             <!-- 面包屑 -->
             <el-row :gutter="30">
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
                 <el-col :sm="20">
                     <el-breadcrumb separator="/">
                         <el-breadcrumb-item><a href="./index.html">Home</a></el-breadcrumb-item>
-                        <el-breadcrumb-item>Publications</el-breadcrumb-item>
-                        <el-breadcrumb-item><a href="./pubPublications.html">Publications|Projects</a></el-breadcrumb-item>
-                        <el-breadcrumb-item>Title</el-breadcrumb-item>
+                        <el-breadcrumb-item>Contact Us</el-breadcrumb-item>
+                        <el-breadcrumb-item><a href="./contactMentors.html">Mentors</a></el-breadcrumb-item>
+                        <el-breadcrumb-item><span id="Title">后端添加的Title</span></el-breadcrumb-item>
                     </el-breadcrumb>
                 </el-col>
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
@@ -116,61 +121,76 @@
                 <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
                 </el-input>
             </el-form>
-            <!-- 文章正文 -->
+            <!-- 文章列表 -->
             <el-row :gutter="30">
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
-                <!-- 文章列表 -->
+                <!-- 人物详情 -->
                 <el-col :sm="15">
-                    <el-card>
-                        <div id="essay">
-                            <h1>Title</h1>
-                            <p>20XX-XX-XX XX:XX:XX</p>
-                            <el-divider></el-divider>
-                            <span>
-                                Nam excepturi corrupti dolorem. Rerum voluptatem laborum natus modi amet. Nam asperiores
-                                esse quae.
+                    <el-card class="itemList">
+                        <div class="itemListImg">
+                            <img src="./resources/images/contactUs/base.jpg" alt="">
+                        </div> 
+                        <p class="itemListText">Research field:Membrane Protein & Drug Network
 
-                                Animi iure numquam in voluptatibus ratione. Voluptas et nam saepe provident. Laboriosam
-                                vero illum repudiandae dolores. Rerum alias voluptatibus molestias dignissimos.
 
-                                Voluptatibus pariatur qui. Aspernatur blanditiis aut. Voluptate dolores voluptatum
-                                temporibus sunt. Laborum optio magnam aut magnam qui.
-                                Adipisci ut occaecati neque sed accusamus error amet. Consequatur rem quo. Voluptas
-                                eaque eius tempora ad cum praesentium esse est. Temporibus quisquam eum cum voluptatem
-                                aut nostrum eius. Assumenda et consectetur ipsum non similique sit autem.
 
-                                Dolore molestiae officia explicabo libero sed aut. Corporis molestias quia eaque odit ut
-                                dolorem. Perspiciatis porro aspernatur. Quis veniam nisi modi adipisci dolore velit.
-
-                                Rerum maxime ut nesciunt ducimus et accusantium hic explicabo. Quia sed laudantium
-                                officia nam perspiciatis. Non voluptatum deleniti nisi placeat deserunt natus
-                                repudiandae in. Itaque eveniet animi. Vero amet et sunt aliquam beatae qui rerum.
-                                Commodi repudiandae voluptatem maxime nesciunt voluptas ut atque.
-                            </span>
-                        </div>
+                                    College of Information Science and Technology, Northeast Normal University, China
+                                    
+                                    
+                                    
+                                    E-mail:wangh101@nenu.edu.cn, wanghan79@hotmail.com
+                        </p>
+                        <el-divider></el-divider>
+                        <!-- 前后页 -->
+                        <el-row type="flex" justify="space-around">
+                            <el-button round class="itemListTextNav">
+                                <a href="">Previous:
+                                    <span itemListTextNavTitle>Quod amet praesentiusentiusentium,commodi veniam.</span>
+                                </a>
+                            </el-button>
+                            <el-button round class="itemListTextNav">
+                                <a href="">Next:
+                                    <span class="itemListTextNavTitle"></span>
+                                </a>
+                            </el-button>
+                        </el-col> 
                     </el-card>
                 </el-col>
-                <!-- PC端显示的搜索框 -->
-                <el-col :sm="5" class="hidden-xs-only">
+                <!-- 人物Nav -->
+                <el-col :sm="5" :xs="12" class="change-xs">
                     <el-card>
-                        <el-form>
-                            <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
-                            </el-input>
-                        </el-form>
-                        <hr>
-                        <a href="">
-                            <el-tag>ListTitle</el-tag>
-                        </a>
-                        <a href="">
-                            <el-tag>ListTitle</el-tag>
-                        </a>
-                        <a href="">
-                            <el-tag>ListTitle</el-tag>
-                        </a>
+                        <h3>Navigation</h3>
+                        <div class="Nav">
+                            <a href="">
+                                <div class="itemImg">
+                                    <img src="./resources/images/contactUs/base.jpg" alt="">
+                                </div>
+                                <h4 class="itemName">Name</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="Nav">
+                            <a href="">
+                                <div class="itemImg">
+                                    <img src="./resources/images/contactUs/base.jpg" alt="">
+                                </div>
+                                <h4 class="itemName">Name</h4>
+                            </a>
+                        </div>
+                        <el-divider></el-divider>
+                        <div class="Nav">
+                            <a href="">
+                                <div class="itemImg">
+                                    <img src="./resources/images/contactUs/base.jpg" alt="">
+                                </div>
+                                <h4 class="itemName">Name</h4>
+                            </a>
+                        </div>
                     </el-card>
                 </el-col>
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
             </el-row>
+            <br class="hidden-xs-only">
         </div>
         <!-- 统一注入尾部栏 -->
         <div id="footer">
