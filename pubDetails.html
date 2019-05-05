@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="./resources/css/common/elementUI.css">
     <link rel="stylesheet" href="./resources/css/common/display.css">
     <link rel="stylesheet" href="./resources/css/common/base.css">
-    <link rel="stylesheet" href="./resources/css/contactDetails.css">
+    <link rel="stylesheet" href="./resources/css/researchActivitiesDetailes.css">
 </head>
 
 <body>
-    <div id="app">
+
+    <body>
+        <div id="app">
         <!-- 导航栏模板 -->
         <el-card id="navigation">
             <!-- PC端导航栏 -->
@@ -96,23 +98,17 @@
                 </el-collapse-transition>
             </div>
         </el-card>
+
         <!-- 主视图窗口 -->
-        <div class="itemDiv">
-            <el-card class="introduce">
-                <h1>Associate Professor. Han Wang</h1>
-                <p>后端添加Research field:Membrane Protein & Drug Network College of
-                     Information Science and Technology, Northeast Normal University, 
-                     China E-mail:wangh101@nenu.edu.cn, wanghan79@hotmail.com</p>
-            </el-card>
-            <!-- 面包屑 -->
+        <div class="itemDiv"></div>
+             <!-- 面包屑 -->
             <el-row :gutter="30">
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
                 <el-col :sm="20">
                     <el-breadcrumb separator="/">
                         <el-breadcrumb-item><a href="./index.html">Home</a></el-breadcrumb-item>
-                        <el-breadcrumb-item>Contact Us</el-breadcrumb-item>
-                        <el-breadcrumb-item><a href="./contactMentors.html">Mentors</a></el-breadcrumb-item>
-                        <el-breadcrumb-item><span id="Title">后端添加的Title</span></el-breadcrumb-item>
+                        <el-breadcrumb-item><a href="./pubProjects.html">上一级</a></el-breadcrumb-item>
+                        <el-breadcrumb-item ><span id="Title">后端添加的Title</span></el-breadcrumb-item>
                     </el-breadcrumb>
                 </el-col>
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
@@ -121,25 +117,17 @@
                 <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
                 </el-input>
             </el-form>
-            <!-- 文章列表 -->
+            <!-- 文章列表和搜索 -->
             <el-row :gutter="30">
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
-                <!-- 人物详情 -->
+                <!-- 文章 -->
                 <el-col :sm="15">
-                    <el-card class="itemList">
-                        <div class="itemListImg">
-                            <img src="./resources/images/contactUs/base.jpg" alt="">
-                        </div> 
-                        <p class="itemListText">Research field:Membrane Protein & Drug Network
-
-
-
-                                    College of Information Science and Technology, Northeast Normal University, China
-                                    
-                                    
-                                    
-                                    E-mail:wangh101@nenu.edu.cn, wanghan79@hotmail.com
-                        </p>
+                    <el-card>
+                        <div class="itemListTextAll">
+                            <h4>Activities Title</h4>
+                            <p>201X-XX-XX</p>
+                            <p class="itemListTextAllp"> </p>
+                        </div>
                         <el-divider></el-divider>
                         <!-- 前后页 -->
                         <el-row type="flex" justify="space-around">
@@ -156,53 +144,35 @@
                         </el-col> 
                     </el-card>
                 </el-col>
-                <!-- 人物Nav -->
-                <el-col :sm="5" :xs="12" class="change-xs">
+                <!-- PC端显示的搜索框 -->
+                <el-col :sm="5" class="hidden-xs-only">
                     <el-card>
-                        <h3>Navigation</h3>
-                        <div class="Nav">
-                            <a href="">
-                                <div class="itemImg">
-                                    <img src="./resources/images/contactUs/base.jpg" alt="">
-                                </div>
-                                <h4 class="itemName">Name</h4>
-                            </a>
-                        </div>
-                        <el-divider></el-divider>
-                        <div class="Nav">
-                            <a href="">
-                                <div class="itemImg">
-                                    <img src="./resources/images/contactUs/base.jpg" alt="">
-                                </div>
-                                <h4 class="itemName">Name</h4>
-                            </a>
-                        </div>
-                        <el-divider></el-divider>
-                        <div class="Nav">
-                            <a href="">
-                                <div class="itemImg">
-                                    <img src="./resources/images/contactUs/base.jpg" alt="">
-                                </div>
-                                <h4 class="itemName">Name</h4>
-                            </a>
-                        </div>
+                        <el-form>
+                            <el-input placeholder="请输入内容" prefix-icon="el-icon-search">
+                            </el-input>
+                        </el-form>
+                        <hr>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
+                        <a href="">
+                            <el-tag>ListTitle</el-tag>
+                        </a>
                     </el-card>
                 </el-col>
                 <el-col :sm="2" class="hidden-xs-only">&nbsp;</el-col>
             </el-row>
-            <br class="hidden-xs-only">
-        </div>
+        </div> 
+
+        <!-- 分页 -->
+
         <!-- 统一注入尾部栏 -->
-        <div id="footer">
-            <el-card>
-                <h4>
-                    Biological big data
-                    Computational methods
-                </h4>
-                <p>©2018 Northeast Normal University-Institute of Computational Biology.</p>
-            </el-card>
+        <div id="footer"><iframe src="./footer.html"></iframe></div>
         </div>
-    </div>
+    </body>
 </body>
 <!-- <script src="./resources/js/common/jquery.js"></script> -->
 <!-- <script src="./resources/js/common/bootstrap.js"></script> -->

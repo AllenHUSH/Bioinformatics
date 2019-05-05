@@ -3,8 +3,9 @@
 /* 通用样式 */
 
 .itemListImg img{
-    width: 436px;
-    height:150px;
+    width: 100%;
+    /* width: 436px;
+    height:150px; */
     margin-bottom: 20px;
     vertical-align:left;
 }
@@ -21,9 +22,9 @@
     .itemList {
         position: relative;
     }
-    .itemListBox {
+    /* .itemListBox {
         height: 270px;
-    }
+    } */
     .itemListImg {
         width: 40%;
         /* vertical-align:left; */
